@@ -1,0 +1,30 @@
+{
+	"folders": [
+		{
+			"name": "wdd130",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.autoSave": "onFocusChange",
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,
+		"editor.defaultFormatter": "vscode.html-language-features",
+		"editor.minimap.enabled": false,
+		"git.enableSmartCommit": true,
+		"git.confirmSync": false,
+		"git.autofetch": true,
+		"scm.defaultViewMode": "list",
+		"scm.repositories.visible": 0,
+		"explorer.fileNesting.enabled": true,
+		"explorer.fileNesting.expand": false,
+		"explorer.compactFolders": false,
+		"explorer.decorations.colors": false,
+		"explorer.decorations.badges": false,
+		"explorer.openEditors.minVisible": 0,
+		"outline.showFiles": false,
+		"explorer.autoOpenDroppedFile": false,
+		"fiveServer.port": 5501,
+		"fiveServer.injectBody": false
+	}
+}
