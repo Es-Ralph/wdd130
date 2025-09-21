@@ -1,0 +1,166 @@
+/* ===============================
+   CSS Variables: Color Scheme & Fonts
+   =============================== */
+:root {
+  --primary-color: #055a05;       /* forest green */
+  --secondary-color: #f4a261;     /* warm sand */
+  --accent1-color: #264653;       /* dark slate blue */
+  --accent2-color: #e9c46a;       /* light golden yellow */
+  --heading-font: "Times New Roman", Georgia, serif;
+  --body-font: Arial, Helvetica, sans-serif;
+  --background-color: #fdf6ec;    /* soft beige */
+}
+
+/* ===============================
+   Box Model Reset
+   =============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===============================
+   Body Styling
+   =============================== */
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+}
+
+/* ===============================
+   Page Width & Centering
+   =============================== */
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   Navigation Styling
+   =============================== */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  background-color: var(--primary-color);
+  padding: 12px;
+}
+
+nav a {
+  color: var(--accent2-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+}
+
+/* ===============================
+   Headings Styling
+   =============================== */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* ===============================
+   Basic Element Spacing
+   =============================== */
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* ===============================
+   Hero Section Styling
+   =============================== */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Background Image */
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Hero Heading Overlay */
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.8;
+  background-color: var(--accent1-color);
+  color: #fff;
+  font-size: 2rem;
+}
+
+/* Hero Article Overlay */
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Article Image Styling */
+.hero article img {
+  float: right;
+  width: 125px;
+  margin-left: 16px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* ===============================
+   Section Styling
+   =============================== */
+section {
+  background-color: #fff;
+  border-left: 4px solid var(--accent1-color);
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+/* ===============================
+   Footer Styling
+   =============================== */
+footer {
+  text-align: center;
+  padding: 16px;
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
+}
+
+footer p {
+  margin-bottom: 12px;
+}
+
+/* Social Media Navigation */
+.socialmedia {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.socialmedia a {
+  text-decoration: none;
+}
+
+.socialmedia img {
+  width: 32px;
+  height: 32px;
+}
