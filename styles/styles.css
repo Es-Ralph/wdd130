@@ -26,7 +26,7 @@ img {
 }
 
 p {
-    padding: 10px;
+    padding: 0px;
 }
 
 aside {
@@ -40,13 +40,17 @@ aside {
 }
 
 aside img {
-    width: 200;
+    width: 200px;
     height: auto;
 }
 
 main img {
+    border: 1px solid black;
     width: 150px;
     height: auto;
+    padding: 2px;
+    box-shadow: #333;
+
 }
 
 p{
