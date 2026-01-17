@@ -45,13 +45,14 @@ aside img {
 }
 
 main img {
-    border: 1px solid black;
     width: 150px;
     height: auto;
+    border: 1px solid #000;
     padding: 2px;
-    box-shadow: #333;
-
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
+
+
 
 p{
     padding: 0;
