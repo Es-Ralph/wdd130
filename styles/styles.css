@@ -1,80 +1,82 @@
-:root {
-    /* Colors */
-    --primary-color: darkblue;
-    --text-light: white;
-    --text-dark: #333;
-    --border-color: #000;
-    --bg-light: #eee;
-
-    /* Sizes */
-    --max-width: 840px;
-    --img-small: 150px;
-    --img-medium: 200px;
-
-    /* Spacing */
-    --padding-sm: 2px;
-    --padding-md: 10px;
-    --padding-lg: 20px;
-
-    /* Effects */
-    --shadow-light: 0 0 10px rgba(0,0,0,0.3);
-    --shadow-heavy: 0 0 30px grey;
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
 }
 
+body {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    
+
+
+}
 nav {
-    background-color: var(--primary-color);
-    padding: var(--padding-md);
+    background-color: darkblue;
+    padding: 10px;
 }
 
 nav a {
-    color: var(--text-light);
+    color: white;
     display: block;
-    padding: var(--padding-lg);
+    padding: 20px;
 }
 
 main{
-    max-width: var(--max-width);
+    max-width: 840px;
 }
 
-h1 {
-    color: var(--primary-color);
-}
-
-img {
-    width: var(--img-small);
+main img {
+    width: 150px;
     height: auto;
-    border: 1px solid var(--border-color);
-    padding: var(--padding-sm);
-    box-shadow: var(--shadow-heavy);
+    border: 1px solid steelblue;
+    padding: 2px;
+    box-shadow: 0 0 30px grey;
+    float: right;
+    margin: 0 0 1rem 1rem;
 }
 
+p {
+    margin: 1rem;
+}
 
 
 aside {
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 0.2);
-    padding: 1rem;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
+    width: 20em;
     text-align: center;
+    position: relative;
+
 }
 
-aside img,
-main img {
-    width: var(--img-medium);
+aside img {
+    width: 200px;
     height: auto;
-    box-shadow: var(--shadow-light);
+   
 }
 
+aside h2 {
+    position: absolute;
+    top: 25px;
+    left: 150px;
 
-
-p{
-    padding: 0;
 }
 
 footer {
     margin-top: 15px;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid #000;
     text-align: center;
+}
+
+/* Class Selectors */
+
+.box{
+    margin: 1rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 1rem;
+    background-color: #eee;
+    color: #000;
+}
+
+.indent {
+    padding-left: 2rem;
 }
