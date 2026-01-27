@@ -7,8 +7,8 @@
 
 /* CSS Variables */
 :root {
-    --primary-color: #1f4e79;   /* dark blue */
-    --accent1-color: rgba(0, 0, 0, 0.6); /* overlay */
+    --primary-color: #1f4e79; /* dark blue */
+    --accent1-color: rgba(0,0,0,0.6); /* overlay */
     --accent2-color: #ffffff;
     --heading-font: "Times New Roman", Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
