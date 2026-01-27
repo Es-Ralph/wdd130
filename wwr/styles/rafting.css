@@ -42,6 +42,11 @@ header nav a:hover {
     text-decoration: underline;
 }
 
+h1, h2 {
+    font-family: var(--heading-font);
+}
+
+
 /* Main content wrapper */
 header, main, footer {
     width: 840px;
