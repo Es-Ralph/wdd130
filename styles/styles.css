@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-shadow: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -12,18 +12,38 @@ body {
 
 }
 nav {
-    background-color: darkblue;
-    padding: 10px;
+    background-color: steelblue;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 nav a {
     color: white;
     display: block;
-    padding: 20px;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
-main{
+header, .grid , footer {
     max-width: 840px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+main {
+    grid-column: 2;
+    margin: 1rem;
 }
 
 main img {
@@ -43,21 +63,26 @@ p {
 
 aside {
     width: 20em;
-    text-align: center;
+    grid-column: 1;
+    grid-row: 1;
     position: relative;
+    text-align: center;
+    justify-content: center;
+    
 
 }
 
 aside img {
     width: 200px;
     height: auto;
-   
+    
 }
 
 aside h2 {
     position: absolute;
     top: 25px;
     left: 150px;
+    
 
 }
 
