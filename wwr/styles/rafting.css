@@ -1,5 +1,5 @@
 /* ===== RESET ===== */
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,6 +10,7 @@
     --primary-color: #1f4e79;
     --accent1-color: rgba(0, 0, 0, 0.6);
     --accent2-color: #ffffff;
+    --text-color: #000000;
     --heading-font: "Times New Roman", Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -19,27 +20,33 @@ body {
     font-family: var(--body-font);
     font-size: 16px;
     line-height: 1.6;
-    color: #000;
+    color: var(--text-color);
 }
 
 /* ===== HEADER ===== */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: var(--primary-color);
     padding: 1rem;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 header img {
     height: 60px;
 }
 
-nav a {
+header nav a {
     color: var(--accent2-color);
     text-decoration: none;
     font-weight: bold;
-    margin: 0 0.75rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
 }
 
 /* ===== HERO ===== */
@@ -52,31 +59,35 @@ nav a {
 .hero img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 .hero h1 {
     position: absolute;
     top: 20px;
-    left: 20px;
-    color: var(--accent2-color);
-    background-color: var(--accent1-color);
-    padding: 0.5rem 1rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
     font-family: var(--heading-font);
+    background-color: var(--accent1-color);
+    color: var(--accent2-color);
+    padding: 0.75rem;
 }
 
 .hero article {
     position: absolute;
     bottom: 20px;
-    right: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
     background-color: var(--accent1-color);
     color: var(--accent2-color);
     padding: 1rem;
-    max-width: 300px;
 }
 
 .hero article img {
     float: right;
-    width: 80px;
+    width: 100px;
     margin-left: 10px;
 }
 
@@ -93,8 +104,10 @@ section {
 
 section h2 {
     font-family: var(--heading-font);
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    padding: 0.75rem;
+    text-align: center;
 }
 
 /* ===== ADVENTURES GRID ===== */
@@ -102,11 +115,7 @@ section h2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1.5rem;
-}
-
-.adventures h2 {
-    grid-column: 1 / -1;
-    text-align: center;
+    margin-top: 1rem;
 }
 
 .adventures figure {
@@ -117,18 +126,18 @@ section h2 {
     width: 100%;
     height: auto;
     border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .adventures figcaption {
     margin-top: 0.5rem;
-    font-weight: bold;
+    font-weight: 600;
+    color: var(--primary-color);
 }
 
 /* ===== FOOTER ===== */
 footer {
     text-align: center;
-    border-top: 1px solid #000;
+    border-top: 1px solid var(--primary-color);
     padding: 1rem;
 }
 
