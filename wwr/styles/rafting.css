@@ -180,6 +180,7 @@ footer p {
 .map iframe {
     width: 100%;
     height: 350px;
+    border: 0;
 }
 
 .contact-form {
@@ -245,3 +246,5 @@ figcaption {
     margin-top: 0.5rem;
     font-weight: bold;
 }
+
+
