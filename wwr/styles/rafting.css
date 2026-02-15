@@ -49,63 +49,88 @@ header nav a:hover {
     text-decoration: underline;
 }
 
-/* ===== HERO ===== */
+/* ===== HERO (HOME PAGE) ===== */
 .hero {
     position: relative;
-    max-width: 1000px;
-    margin: 1.5rem auto;
+    width: 100%;
 }
 
 .hero img {
     width: 100%;
-    height: auto;
+    height: 450px;
+    object-fit: cover;
     display: block;
 }
 
 .hero h1 {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: var(--accent1-color);
     color: var(--accent2-color);
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
     font-family: var(--heading-font);
+    font-size: 2.5rem;
+    text-align: center;
 }
 
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background-color: var(--accent1-color);
-    color: var(--accent2-color);
-    padding: 1rem;
-    max-width: 300px;
+/* ===== NEWSLETTER ===== */
+.newsletter {
+    padding: 2rem;
+    text-align: center;
+    background: #eae2b7;
 }
 
-.hero article img {
-    float: right;
-    width: 80px;
-    margin-left: 10px;
+.newsletter form {
+    margin-top: 1rem;
 }
 
-/* ===== MAIN ===== */
-main {
-    max-width: 1000px;
+.newsletter input {
+    padding: 0.6rem;
+    margin: 0.5rem;
+    width: 200px;
+}
+
+.newsletter button {
+    padding: 0.6rem 1.2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== CALL TO ACTION ===== */
+.cta {
+    padding: 2rem;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #d62828;
+    color: white;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+/* ===== HOME GRID CONTENT ===== */
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 1rem;
 }
 
-main section {
-    margin: 2rem 0;
+.grid-content img {
+    width: 100%;
+    border-radius: 6px;
 }
 
-main section h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-/* ===== ADVENTURES GRID ===== */
+/* ===== ADVENTURES GRID (ABOUT PAGE) ===== */
 .adventures {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -123,64 +148,50 @@ main section h2 {
 
 .adventures img {
     width: 100%;
-    height: auto;
     border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.adventures figcaption {
-    margin-top: 0.5rem;
-    font-weight: bold;
-}
-
-/* ===== FOOTER ===== */
-footer {
-    text-align: center;
-    border-top: 1px solid var(--text-color);
-    padding: 1rem;
-}
-
-footer p {
-    margin-bottom: 0.75rem;
-}
-
-.socialmedia {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-.socialmedia img {
-    width: 30px;
-    height: auto;
-}
-
-/* CONTACT PAGE */
-
-.contact-page {
+/* ===== TRIPS PAGE GRID ===== */
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
     padding: 2rem;
 }
 
-.contact-info {
+.trip img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* ===== TRIPS TABLE ===== */
+.trip-table {
+    padding: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #333;
+}
+
+th, td {
+    padding: 0.75rem;
     text-align: center;
-    margin-bottom: 2rem;
+}
+
+/* ===== CONTACT PAGE ===== */
+.contact-page {
+    padding: 2rem;
 }
 
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    align-items: start;
-}
-
-.map iframe {
-    width: 100%;
-    height: 350px;
-    border: 0;
 }
 
 .contact-form {
@@ -191,45 +202,10 @@ footer p {
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
     padding: 0.6rem;
-    font-size: 1rem;
 }
 
-.contact-form textarea {
-    min-height: 120px;
-}
-
-fieldset {
-    border: 1px solid #ccc;
-    padding: 1rem;
-}
-
-legend {
-    font-weight: bold;
-}
-
-.checkbox {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-}
-
-button[type="submit"] {
-    padding: 0.75rem;
-    background-color: #2b6cb0;
-    color: white;
-    border: none;
-    font-size: 1.1rem;
-    cursor: pointer;
-}
-
-button[type="submit"]:hover {
-    background-color: #1e4f87;
-}
-
-/* EMPLOYEES */
-
+/* ===== EMPLOYEES ===== */
 .employees {
     text-align: center;
     margin-top: 3rem;
@@ -242,9 +218,22 @@ button[type="submit"]:hover {
     width: 100%;
 }
 
-figcaption {
-    margin-top: 0.5rem;
-    font-weight: bold;
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 2rem;
 }
 
+.socialmedia {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
 
+.socialmedia img {
+    width: 30px;
+}
